@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace xadres_console.tabuleiro
+namespace tabuleiro
 {
-    class TabeleiroException
+    class TabuleiroException : Exception
     {
+        public TabuleiroException(string msg) : base(msg)
+        {
+        }
     }
 }
