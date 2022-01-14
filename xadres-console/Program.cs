@@ -38,10 +38,9 @@ namespace xadres_console
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
                     }
-
                 }
-                
-                
+
+                Console.Clear();
                 Tela.imprimirTabuleiro(partida.tab);
 
                 Console.ReadLine();
