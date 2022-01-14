@@ -2,6 +2,7 @@
 {
     class Tabuleiro
     {
+
         public int linhas { get; set; }
         public int colunas { get; set; }
         private Peca[,] pecas;
@@ -13,9 +14,9 @@
             pecas = new Peca[linhas, colunas];
         }
 
-        public Peca peca(int linha,int coluna)
+        public Peca peca(int linha, int coluna)
         {
-            return pecas [linha, coluna];
+            return pecas[linha, coluna];
         }
 
         public Peca peca(Posicao pos)
@@ -33,7 +34,7 @@
         {
             if (existePeca(pos))
             {
-                throw new TabuleiroException("Já existe uma peça nesta Posição");
+                throw new TabuleiroException("Já existe uma peça nessa posição!");
             }
             pecas[pos.linha, pos.coluna] = p;
             p.posicao = pos;
@@ -53,7 +54,7 @@
 
         public bool posicaoValida(Posicao pos)
         {
-            if (pos.linha<0 || pos.linha>=linhas ||pos.coluna<0 || pos.coluna >= colunas)
+            if (pos.linha < 0 || pos.linha >= linhas || pos.coluna < 0 || pos.coluna >= colunas)
             {
                 return false;
             }
@@ -64,9 +65,8 @@
         {
             if (!posicaoValida(pos))
             {
-                throw new TabuleiroException("Posição Invalida");
+                throw new TabuleiroException("Posição inválida!");
             }
         }
-
     }
 }

@@ -17,16 +17,12 @@ namespace xadrez
             return "R";
         }
 
-        Tabuleiro tab = new Tabuleiro(8, 8);
-
         private bool podeMover(Posicao pos)
         {
             Peca p = tab.peca(pos);
             return p == null || p.cor != cor;
         }
 
-        // ajustando as coisas
-        // anotando as alterações
         private bool testeTorreParaRoque(Posicao pos)
         {
             Peca p = tab.peca(pos);

@@ -14,10 +14,9 @@ namespace xadrez
         {
             return "B";
         }
-        Tabuleiro tab = new Tabuleiro(8, 8);
+
         private bool podeMover(Posicao pos)
         {
-            
             Peca p = tab.peca(pos);
             return p == null || p.cor != cor;
         }
@@ -26,7 +25,6 @@ namespace xadrez
         {
             bool[,] mat = new bool[tab.linhas, tab.colunas];
 
-            
             Posicao pos = new Posicao(0, 0);
 
             // NO

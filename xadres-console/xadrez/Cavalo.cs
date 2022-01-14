@@ -10,7 +10,6 @@ namespace xadrez
         {
         }
 
-        Tabuleiro tab = new Tabuleiro(8, 8);
         public override string ToString()
         {
             return "C";

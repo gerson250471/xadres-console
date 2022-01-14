@@ -18,8 +18,6 @@ namespace xadrez
             return "P";
         }
 
-        Tabuleiro tab = new Tabuleiro(8, 8);
-
         private bool existeInimigo(Posicao pos)
         {
             Peca p = tab.peca(pos);
@@ -64,8 +62,6 @@ namespace xadrez
                 // #jogadaespecial en passant
                 if (posicao.linha == 3)
                 {
-                    
-                    
                     Posicao esquerda = new Posicao(posicao.linha, posicao.coluna - 1);
                     if (tab.posicaoValida(esquerda) && existeInimigo(esquerda) && tab.peca(esquerda) == partida.vulneravelEnPassant)
                     {

@@ -15,8 +15,6 @@ namespace xadrez
             return "D";
         }
 
-        Tabuleiro tab = new Tabuleiro(8, 8);
-
         private bool podeMover(Posicao pos)
         {
             Peca p = tab.peca(pos);

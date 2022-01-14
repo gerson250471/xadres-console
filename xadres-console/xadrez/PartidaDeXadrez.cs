@@ -5,7 +5,7 @@ namespace xadrez
 {
     class PartidaDeXadrez
     {
-        // ajustando as coisas 
+
         public Tabuleiro tab { get; private set; }
         public int turno { get; private set; }
         public Cor jogadorAtual { get; private set; }
